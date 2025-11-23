@@ -126,21 +126,30 @@ import ResearchProfile from "../assets/images/profilepictures/aurapic.JPEG";
         </p>
 
         <div class="mt-6 space-y-6">
-          <div class="bg-surface/30 p-5 rounded-lg border border-white/5">
-            <h3 class="text-lg font-medium mb-3 text-white/90">Music Dataset Project</h3>
-            <p class="text-white/80 mb-4 leading-relaxed text-sm">
-              Building a music dataset that pairs classical scores with verified online performances using multi-signal alignment verification.
-            </p>
-            <h4 class="text-base font-medium mb-2 text-white/80">What I built</h4>
-            <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
-              <li>• implemented the candidate collection pipeline using triangulation of the DLC musicologist corpus, IMSLP metadata, and LLM-generated search queries to produce verified YouTube links, performer metadata, and comment threads</li>
-              <li>• built multi-signal score-to-audio verification system that triangulates DTW alignment paths, Aria-AMT transcripts for independent note events, and CLaMP patch-level similarity between audio windows and score fragments</li>
-              <li>• developed agreement-based acceptance criteria that defer unstable alignments rather than forcing them, handling missing intros, extra repeats, and score-edition mismatches</li>
-              <li>• created structured listener data pipeline that categorizes YouTube comments by sentiment, performance, composer, recording, and musicological content, feeding them into engineered questionnaires answered by multiple LLMs with citation requirements</li>
-              <li>• designed modular prompt system to avoid hallucination and enable training lightweight classifiers from LLM-labeled samples</li>
-            </ul>
-            <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> DTW, Aria-AMT, CLaMP, MusicXML, LLMs, IMSLP, DLC corpus</p>
-          </div>
+          <details class="research-panel">
+            <summary class="research-summary">
+              <div>
+                <h3 class="text-lg font-medium mb-1 text-white/90">Music Dataset Project</h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  Building a music dataset that pairs classical scores with verified online performances using multi-signal alignment verification.
+                </p>
+              </div>
+              <svg class="research-toggle-icon w-5 h-5 text-white/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="research-content">
+              <h4 class="text-base font-medium mb-2 text-white/80">What I built</h4>
+              <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
+                <li>• implemented the candidate collection pipeline using triangulation of the DLC musicologist corpus, IMSLP metadata, and LLM-generated search queries to produce verified YouTube links, performer metadata, and comment threads</li>
+                <li>• built multi-signal score-to-audio verification system that triangulates DTW alignment paths, Aria-AMT transcripts for independent note events, and CLaMP patch-level similarity between audio windows and score fragments</li>
+                <li>• developed agreement-based acceptance criteria that defer unstable alignments rather than forcing them, handling missing intros, extra repeats, and score-edition mismatches</li>
+                <li>• created structured listener data pipeline that categorizes YouTube comments by sentiment, performance, composer, recording, and musicological content, feeding them into engineered questionnaires answered by multiple LLMs with citation requirements</li>
+                <li>• designed modular prompt system to avoid hallucination and enable training lightweight classifiers from LLM-labeled samples</li>
+              </ul>
+              <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> DTW, Aria-AMT, CLaMP, MusicXML, LLMs, IMSLP, DLC corpus</p>
+            </div>
+          </details>
         </div>
       </article>
 
@@ -159,93 +168,117 @@ import ResearchProfile from "../assets/images/profilepictures/aurapic.JPEG";
 
         <div class="mt-6 space-y-6">
           <!-- Nonstandard Analysis -->
-          <div class="bg-surface/30 p-5 rounded-lg border border-white/5">
-            <div class="flex items-start justify-between mb-3">
-              <h3 class="text-lg font-medium text-white/90">Nonstandard Analysis + Ramsey Theory</h3>
+          <details class="research-panel">
+            <summary class="research-summary">
+              <div>
+                <h3 class="text-lg font-medium text-white/90">Nonstandard Analysis + Ramsey Theory</h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  I studied nonstandard analysis and used it as a lens to explore classical ideas in Ramsey Theory, learning how ultrafilters, hyperintegers, and infinitesimals simplify combinatorial arguments.
+                </p>
+              </div>
               <a 
                 href="https://github.com/jayadevgh/Mathematics/blob/main/Nonstandard-Analysis-Math-Paper.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="text-accent hover:text-accent/80 text-sm underline"
+                class="text-accent hover:text-accent/80 text-sm underline flex-shrink-0"
               >
                 Paper →
               </a>
+            </summary>
+            <div class="research-content">
+              <h4 class="text-base font-medium mb-2 text-white/80">What I worked on</h4>
+              <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
+                <li>• studied ultrafilter-based constructions and transfer principles in nonstandard analysis</li>
+                <li>• explored how hyperfinite combinatorics can give alternative viewpoints on classical Ramsey results</li>
+                <li>• wrote a small paper connecting nonstandard techniques to classical partition regularity statements</li>
+                <li>• learned how to write proofs in a more formal, structured way than I had before</li>
+              </ul>
+              <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Topics & Tools:</strong> Nonstandard Analysis, Ultrafilters, Hyperintegers, Ramsey Theory</p>
             </div>
-            <p class="text-white/80 mb-4 leading-relaxed text-sm">
-              I studied nonstandard analysis and used it as a lens to explore classical ideas in Ramsey Theory. This was my first real math research experience, and I focused on understanding how ultrafilters, hyperintegers, and infinitesimal reasoning can simplify Ramsey-style combinatorial arguments.
-            </p>
-            <h4 class="text-base font-medium mb-2 text-white/80">What I worked on</h4>
-            <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
-              <li>• studied ultrafilter-based constructions and transfer principles in nonstandard analysis</li>
-              <li>• explored how hyperfinite combinatorics can give alternative viewpoints on classical Ramsey results</li>
-              <li>• wrote a small paper connecting nonstandard techniques to classical partition regularity statements</li>
-              <li>• learned how to write proofs in a more formal, structured way than I had before</li>
-            </ul>
-            <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Topics & Tools:</strong> Nonstandard Analysis, Ultrafilters, Hyperintegers, Ramsey Theory</p>
-          </div>
+          </details>
 
           <!-- Elliptic Curves -->
-          <div class="bg-surface/30 p-5 rounded-lg border border-white/5">
-            <div class="flex items-start justify-between mb-3">
-              <h3 class="text-lg font-medium text-white/90">Elliptic Curve Cryptography + Congruent Number Problem</h3>
+          <details class="research-panel">
+            <summary class="research-summary">
+              <div>
+                <h3 class="text-lg font-medium text-white/90">Elliptic Curve Cryptography + Congruent Number Problem</h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  I connected elliptic curve cryptography concepts to the classical congruent number problem, looking at how rational triangles map to curve arithmetic.
+                </p>
+              </div>
               <a 
                 href="https://github.com/jayadevgh/Mathematics/blob/main/EllipticCurves-CongNumer-Math-Paper.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="text-accent hover:text-accent/80 text-sm underline"
+                class="text-accent hover:text-accent/80 text-sm underline flex-shrink-0"
               >
                 Paper →
               </a>
+            </summary>
+            <div class="research-content">
+              <h4 class="text-base font-medium mb-2 text-white/80">What I worked on</h4>
+              <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
+                <li>• learned the basics of elliptic curve arithmetic, rational points, and group law</li>
+                <li>• studied classical results linking elliptic curves to the congruent number problem via Tunnell's theorem</li>
+                <li>• explored how curves of the form (y² = x³ - n²x) relate to rational right triangles</li>
+                <li>• wrote a paper explaining how ECC machinery can be repurposed beyond cryptography</li>
+                <li>• gained intuition for how algebraic structures (groups, torsion points) show up in computational settings</li>
+              </ul>
+              <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Topics & Tools:</strong> Elliptic Curves, Diophantine Problems, ECC, Number Theory</p>
             </div>
-            <p class="text-white/80 mb-4 leading-relaxed text-sm">
-              I took an introductory course in cryptography at Euler Circle and ended up writing a paper about how elliptic curves can be used to understand the congruent number problem (which asks which integers can be areas of right triangles with rational side lengths).
-            </p>
-            <h4 class="text-base font-medium mb-2 text-white/80">What I worked on</h4>
-            <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
-              <li>• learned the basics of elliptic curve arithmetic, rational points, and group law</li>
-              <li>• studied classical results linking elliptic curves to the congruent number problem via Tunnell's theorem</li>
-              <li>• explored how curves of the form (y² = x³ - n²x) relate to rational right triangles</li>
-              <li>• wrote a paper explaining how ECC machinery can be repurposed beyond cryptography</li>
-              <li>• gained intuition for how algebraic structures (groups, torsion points) show up in computational settings</li>
-            </ul>
-            <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Topics & Tools:</strong> Elliptic Curves, Diophantine Problems, ECC, Number Theory</p>
-          </div>
+          </details>
 
           <!-- CGT -->
-          <div class="bg-surface/30 p-5 rounded-lg border border-white/5">
-            <div class="flex items-start justify-between mb-3">
-              <h3 class="text-lg font-medium text-white/90">Combinatorial Game Theory + Error-Correcting Codes</h3>
+          <details class="research-panel">
+            <summary class="research-summary">
+              <div>
+                <h3 class="text-lg font-medium text-white/90">Combinatorial Game Theory + Error-Correcting Codes</h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  I connected CGT intuition to coding theory, comparing Nim-like strategies to Hamming and lexicode constructions.
+                </p>
+              </div>
               <a 
                 href="https://github.com/jayadevgh/Mathematics/blob/main/Combinatorial_Error_Correcting_Codes.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="text-accent hover:text-accent/80 text-sm underline"
+                class="text-accent hover:text-accent/80 text-sm underline flex-shrink-0"
               >
                 Paper →
               </a>
+            </summary>
+            <div class="research-content">
+              <h4 class="text-base font-medium mb-2 text-white/80">What I worked on</h4>
+              <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
+                <li>• examined how Hamming code constructions overlap with "Nim-like" structures in impartial games</li>
+                <li>• connected lexicographic code construction (Lexicodes) to the logic behind optimal play in heap games</li>
+                <li>• generalized Nim-inspired arguments to a broader class of impartial heap games</li>
+                <li>• studied annihilation games and the construction of "Anncodes," showing parallels between game outcomes and parity-check constraints</li>
+                <li>• wrote a paper tying these themes together, focusing on the idea that coding-theory and CGT share deeper combinatorial structure than they appear to</li>
+              </ul>
+              <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Topics & Tools:</strong> Nim, Hamming Codes, Lexicodes, Annihilation Games, CGT, Coding Theory</p>
             </div>
-            <p class="text-white/80 mb-4 leading-relaxed text-sm">
-              I took a course in combinatorial game theory and wrote a project connecting CGT ideas to error-correcting codes.
-            </p>
-            <h4 class="text-base font-medium mb-2 text-white/80">What I worked on</h4>
-            <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
-              <li>• examined how Hamming code constructions overlap with "Nim-like" structures in impartial games</li>
-              <li>• connected lexicographic code construction (Lexicodes) to the logic behind optimal play in heap games</li>
-              <li>• generalized Nim-inspired arguments to a broader class of impartial heap games</li>
-              <li>• studied annihilation games and the construction of "Anncodes," showing parallels between game outcomes and parity-check constraints</li>
-              <li>• wrote a paper tying these themes together, focusing on the idea that coding-theory and CGT share deeper combinatorial structure than they appear to</li>
-            </ul>
-            <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Topics & Tools:</strong> Nim, Hamming Codes, Lexicodes, Annihilation Games, CGT, Coding Theory</p>
-          </div>
+          </details>
 
           <!-- Complex Analysis -->
-          <div class="bg-surface/30 p-5 rounded-lg border border-white/5">
-            <h3 class="text-lg font-medium mb-3 text-white/90">Complex Analysis</h3>
-            <p class="text-white/80 mb-4 leading-relaxed text-sm">
-              I started a course in complex analysis during 2025 that covered power series, holomorphic functions, and geometric intuition around the complex plane. I didn't complete a final paper for this one, but it gave me a lot of the conceptual background I now use in DSP and ML (especially when working with Fourier transforms and analytic structure in signals).
-            </p>
-            <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Topics & Tools:</strong> Complex Differentiation, Holomorphy, Power Series, Mapping Properties</p>
-          </div>
+          <details class="research-panel">
+            <summary class="research-summary">
+              <div>
+                <h3 class="text-lg font-medium mb-1 text-white/90">Complex Analysis</h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  A 2025 complex analysis course covering holomorphy, power series, and geometric intuition that now informs my DSP/ML work.
+                </p>
+              </div>
+              <svg class="research-toggle-icon w-5 h-5 text-white/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="research-content">
+              <p class="text-white/80 leading-relaxed text-sm mb-4">
+                I didn't finish a final paper for this one, but diving into analytic continuation, contour reasoning, and the geometry of the complex plane gave me conceptual footing for Fourier intuition and signal analysis.
+              </p>
+              <p class="text-sm text-white/60"><strong class="text-white/80">Topics & Tools:</strong> Complex Differentiation, Holomorphy, Power Series, Mapping Properties</p>
+            </div>
+          </details>
         </div>
       </article>
 
@@ -272,38 +305,56 @@ import ResearchProfile from "../assets/images/profilepictures/aurapic.JPEG";
 
         <div class="mt-6 space-y-6">
           <!-- Virtual Staining -->
-          <div class="bg-surface/30 p-5 rounded-lg border border-white/5">
-            <h3 class="text-lg font-medium mb-3 text-white/90">Virtual Staining (GANs + GNNs)</h3>
-            <p class="text-white/80 mb-4 leading-relaxed text-sm">
-              Building a system that generates virtual CD45 immunofluorescence masks from H&E-stained slides using GANs and GNNs.
-            </p>
-            <h4 class="text-base font-medium mb-2 text-white/80">What I built</h4>
-            <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
-              <li>• built GAN architecture trained to translate H&E patches into corresponding CD45 fluorescence patterns, exploring U-Net, Attention U-Net, and Half U-Net generator variants with different trade-offs between localization accuracy, computational cost, and feature preservation</li>
-              <li>• designed PatchGAN discriminator that enforced local realism and penalized implausible outputs, learning textural cues in H&E stain that correlate with immune-cell morphology</li>
-              <li>• integrated graph neural network (GNN) pipeline that segments nuclei, generates patch-level embeddings, and constructs graphs capturing neighborhood relationships to provide explicit structural prior</li>
-              <li>• fused CNN features from the generator with GNN-derived relational information to maintain spatial consistency in regions where GANs alone tend to hallucinate or blur</li>
-              <li>• evaluated final system on 6,546 paired images containing both H&E and co-registered CD45 immunofluorescence, demonstrating improved localization of immune-cell clusters compared to pure convolutional models</li>
-            </ul>
-            <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> GANs, GNNs, U-Net, Attention U-Net, Half U-Net, PatchGAN, CNNs</p>
-          </div>
+          <details class="research-panel">
+            <summary class="research-summary">
+              <div>
+                <h3 class="text-lg font-medium text-white/90">Virtual Staining (GANs + GNNs)</h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  Building a system that generates virtual CD45 immunofluorescence masks from H&E-stained slides using GANs and GNNs.
+                </p>
+              </div>
+              <svg class="research-toggle-icon w-5 h-5 text-white/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="research-content">
+              <h4 class="text-base font-medium mb-2 text-white/80">What I built</h4>
+              <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
+                <li>• built GAN architecture trained to translate H&E patches into corresponding CD45 fluorescence patterns, exploring U-Net, Attention U-Net, and Half U-Net generator variants with different trade-offs between localization accuracy, computational cost, and feature preservation</li>
+                <li>• designed PatchGAN discriminator that enforced local realism and penalized implausible outputs, learning textural cues in H&E stain that correlate with immune-cell morphology</li>
+                <li>• integrated graph neural network (GNN) pipeline that segments nuclei, generates patch-level embeddings, and constructs graphs capturing neighborhood relationships to provide explicit structural prior</li>
+                <li>• fused CNN features from the generator with GNN-derived relational information to maintain spatial consistency in regions where GANs alone tend to hallucinate or blur</li>
+                <li>• evaluated final system on 6,546 paired images containing both H&E and co-registered CD45 immunofluorescence, demonstrating improved localization of immune-cell clusters compared to pure convolutional models</li>
+              </ul>
+              <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> GANs, GNNs, U-Net, Attention U-Net, Half U-Net, PatchGAN, CNNs</p>
+            </div>
+          </details>
 
           <!-- MIL -->
-          <div class="bg-surface/30 p-5 rounded-lg border border-white/5">
-            <h3 class="text-lg font-medium mb-3 text-white/90">Malignant Cell Ranking (Multiple-Instance Learning)</h3>
-            <p class="text-white/80 mb-4 leading-relaxed text-sm">
-              Using Multiple-Instance Learning to rank malignant cells in cytology slides for cancer diagnosis.
-            </p>
-            <h4 class="text-base font-medium mb-2 text-white/80">What I built</h4>
-            <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
-              <li>• constructed full preprocessing pipeline to turn raw cytology images into MIL-ready data: handling cell segmentation, extracting standardized cell patches, and representing each slide as a collection of cell embeddings</li>
-              <li>• integrated data into AutoParisX platform for automated MIL experimentation while writing custom PyTorch modules for attention pooling, feature extraction, and training logic</li>
-              <li>• trained MIL model to predict slide-level cancer labels while simultaneously learning which cells mattered most through attention mechanism that assigned scores reflecting each cell's contribution to diagnosis</li>
-              <li>• validated ranked cells by manually inspecting results, confirming the model consistently elevated cells exhibiting dysplastic characteristics (large irregular nuclei, coarse chromatin, high nuclear-to-cytoplasmic ratios) that mirror what pathologists search for</li>
-              <li>• delivered system that provides both accurate slide-level predictions and ranked lists of "most likely malignant" cells for each sample, making cytology analysis both scalable and interpretable</li>
-            </ul>
-            <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> Multiple-Instance Learning (MIL), PyTorch, AutoParisX, attention pooling</p>
-          </div>
+          <details class="research-panel">
+            <summary class="research-summary">
+              <div>
+                <h3 class="text-lg font-medium text-white/90">Malignant Cell Ranking (Multiple-Instance Learning)</h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  Using Multiple-Instance Learning to rank malignant cells in cytology slides for cancer diagnosis.
+                </p>
+              </div>
+              <svg class="research-toggle-icon w-5 h-5 text-white/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="research-content">
+              <h4 class="text-base font-medium mb-2 text-white/80">What I built</h4>
+              <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
+                <li>• constructed full preprocessing pipeline to turn raw cytology images into MIL-ready data: handling cell segmentation, extracting standardized cell patches, and representing each slide as a collection of cell embeddings</li>
+                <li>• integrated data into AutoParisX platform for automated MIL experimentation while writing custom PyTorch modules for attention pooling, feature extraction, and training logic</li>
+                <li>• trained MIL model to predict slide-level cancer labels while simultaneously learning which cells mattered most through attention mechanism that assigned scores reflecting each cell's contribution to diagnosis</li>
+                <li>• validated ranked cells by manually inspecting results, confirming the model consistently elevated cells exhibiting dysplastic characteristics (large irregular nuclei, coarse chromatin, high nuclear-to-cytoplasmic ratios) that mirror what pathologists search for</li>
+                <li>• delivered system that provides both accurate slide-level predictions and ranked lists of "most likely malignant" cells for each sample, making cytology analysis both scalable and interpretable</li>
+              </ul>
+              <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> Multiple-Instance Learning (MIL), PyTorch, AutoParisX, attention pooling</p>
+            </div>
+          </details>
         </div>
       </article>
 
@@ -329,24 +380,82 @@ import ResearchProfile from "../assets/images/profilepictures/aurapic.JPEG";
         </p>
 
         <div class="mt-6 space-y-6">
-          <div class="bg-surface/30 p-5 rounded-lg border border-white/5">
-            <h3 class="text-lg font-medium mb-3 text-white/90">Alzheimer's MRI Generation with Conditional GANs</h3>
-            <p class="text-white/80 mb-4 leading-relaxed text-sm">
-              Using Conditional GANs to generate synthetic Alzheimer's MRI scans to augment scarce neuroimaging datasets.
-            </p>
-            <h4 class="text-base font-medium mb-2 text-white/80">What I built</h4>
-            <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
-              <li>• established strong baseline classifier using ResNet architecture trained on curated Alzheimer's MRI dataset containing Non-Demented, Very Mild Demented, Mild Demented, and Moderate Demented images, achieving high performance after preprocessing, class rebalancing, and normalization</li>
-              <li>• developed Conditional GAN architecture that incorporates disease stages directly into both generator and discriminator, significantly stabilizing training compared to early DCGAN and WGAN experiments that suffered from mode collapse and lack of diversity</li>
-              <li>• implemented latent-space interpolation to probe the model's internal representations, creating smooth transitions between disease stages and revealing how the GAN encoded progression as continuous trajectories rather than discrete class jumps</li>
-              <li>• generated "intermediate" synthetic scans that don't exist in real datasets but represent plausible states between early and moderate disease, illustrating how disease characteristics evolve continuously</li>
-              <li>• evaluated synthetic and interpolated images in downstream tasks, demonstrating that incorporating generated MRI scans improved classification performance to roughly 88%, showing synthetic data can meaningfully supplement real-world datasets</li>
-            </ul>
-            <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> Conditional GANs, WGANs, DCGANs, ResNet, latent-space interpolation</p>
-          </div>
+          <details class="research-panel">
+            <summary class="research-summary">
+              <div>
+                <h3 class="text-lg font-medium text-white/90">Alzheimer's MRI Generation with Conditional GANs</h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  Using Conditional GANs to generate synthetic Alzheimer's MRI scans to augment scarce neuroimaging datasets.
+                </p>
+              </div>
+              <svg class="research-toggle-icon w-5 h-5 text-white/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+            <div class="research-content">
+              <h4 class="text-base font-medium mb-2 text-white/80">What I built</h4>
+              <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
+                <li>• established strong baseline classifier using ResNet architecture trained on curated Alzheimer's MRI dataset containing Non-Demented, Very Mild Demented, Mild Demented, and Moderate Demented images, achieving high performance after preprocessing, class rebalancing, and normalization</li>
+                <li>• developed Conditional GAN architecture that incorporates disease stages directly into both generator and discriminator, significantly stabilizing training compared to early DCGAN and WGAN experiments that suffered from mode collapse and lack of diversity</li>
+                <li>• implemented latent-space interpolation to probe the model's internal representations, creating smooth transitions between disease stages and revealing how the GAN encoded progression as continuous trajectories rather than discrete class jumps</li>
+                <li>• generated "intermediate" synthetic scans that don't exist in real datasets but represent plausible states between early and moderate disease, illustrating how disease characteristics evolve continuously</li>
+                <li>• evaluated synthetic and interpolated images in downstream tasks, demonstrating that incorporating generated MRI scans improved classification performance to roughly 88%, showing synthetic data can meaningfully supplement real-world datasets</li>
+              </ul>
+              <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> Conditional GANs, WGANs, DCGANs, ResNet, latent-space interpolation</p>
+            </div>
+          </details>
         </div>
       </article>
     </div>
   </section>
 
 </BaseLayout>
+
+<style>
+  .research-panel {
+    background: rgba(18, 20, 38, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0.9rem;
+    padding: 1.25rem 1.5rem;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1.25rem;
+  }
+
+  .research-panel:hover {
+    border-color: rgba(99, 179, 237, 0.6);
+    box-shadow: 0 15px 35px rgba(99, 179, 237, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .research-panel[open] {
+    border-color: rgba(99, 179, 237, 0.8);
+    box-shadow: 0 20px 45px rgba(99, 179, 237, 0.45);
+  }
+
+  .research-summary {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .research-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .research-toggle-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .research-panel[open] .research-toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .research-content {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+</style>

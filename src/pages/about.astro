@@ -6,6 +6,8 @@ import WFSuitFriends from "../assets/images/wfsuitwithfriends.png";
 import SuitAura2 from "../assets/images/suitaura2.JPEG";
 import AuraPic from "../assets/images/aurapic.JPEG";
 import WaterPolo from "../assets/images/waterpolopic.png";
+import CoastalHonorChoir from "../assets/images/coastalhonorchoir.JPEG";
+import PromFriends from "../assets/images/promwfriends.png";
 ---
 
 <BaseLayout title="About">
@@ -22,7 +24,70 @@ import WaterPolo from "../assets/images/waterpolopic.png";
       </div>
     </div>
 
+    <section class="space-y-10">
+      <div>
+        <h2 class="text-2xl font-semibold mb-3">Technical Skills</h2>
+        <p class="text-white/70 mb-4">
+          Everything on this site points back to a few core skills I've built through Bond, GPT-from-scratch, my DL microframework, and the music/research work.
+        </p>
+        <ul class="space-y-4 text-white/80 text-sm leading-relaxed">
+          <li>
+            <span class="font-semibold text-white">ML & Modeling:</span> Transformer stacks, custom BPE tokenizers, calibration pipelines, GANs/GNNs, Multiple-Instance Learning, DTW + Aria-AMT score/audio alignment, and lightweight inference tooling in PyTorch + NumPy.
+          </li>
+          <li>
+            <span class="font-semibold text-white">Systems & Apps:</span> Kotlin, Jetpack Compose, BLE advertising/scanning, Firebase Auth/Firestore, AWS Bedrock integrations, and production-ready Android touchpoints (lifecycle, navigation, responsive UI).
+          </li>
+          <li>
+            <span class="font-semibold text-white">Frameworks & Infrastructure:</span> Custom autodiff engines, optimizer implementations (SGD, Adam), dataset/tooling glue in Python, C++, and Java, plus reproducible experiment setups (AutoParisX, AWS, GitHub).
+          </li>
+          <li>
+            <span class="font-semibold text-white">Collaboration & Storytelling:</span> Writing technical blogs, documenting builds (decking Bond, publishing math papers), and packaging research so teammates and judges can re-use it.
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-3">Coursework</h2>
+        <div class="space-y-4 text-white/80 text-sm leading-relaxed">
+          <div>
+            <p class="text-white font-semibold mb-1">Finished</p>
+            <p class="text-white/80">Data Structures & Algorithms, Discrete Math, Linear Algebra, Intermediate C++, Intermediate Java.</p>
+          </div>
+          <div>
+            <p class="text-white font-semibold mb-1">Current</p>
+            <p class="text-white/80">Hardware/Software Interfaces, Real Analysis, Foundations to Computing I.</p>
+          </div>
+          <div>
+            <p class="text-white font-semibold mb-1">Planned</p>
+            <p class="text-white/80">Deep Learning, Systems Programming (Winter 2025), NLP, Operating Systems, Algorithms, Differential Topology (Spring 2025).</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-3">Honors & Leadership</h2>
+        <ul class="space-y-3 text-white/80 text-sm leading-relaxed">
+          <li>
+            2025 DubHacks Top 3 Winner — AWS Track (<a href="https://devpost.com/software/bond-xuhodw" target="_blank" rel="noopener noreferrer" class="text-accent underline hover:text-accent/80">Project Link →</a>)
+          </li>
+          <li>
+            AIME Qualifier (Top 5%) — 2022, 2023
+          </li>
+          <li>
+            USACO Silver Division • <a href="https://codeforces.com/profile/Jayadevgh" target="_blank" rel="noopener noreferrer" class="text-accent underline hover:text-accent/80">Codeforces Specialist (1438)</a>
+          </li>
+          <li>
+            Water Polo Team Captain (4 yrs Varsity); mentored teammates through practices, film review, and playoff prep
+          </li>
+          <li>
+            Instructor & Chapter Director for Deep Learning, C++, and Java at We Love STEM and Stemist
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="mt-12 mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Photo Gallery</h2>
       <div class="relative overflow-hidden rounded-2xl shadow-2xl">
         <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
           <img 
@@ -48,6 +113,16 @@ import WaterPolo from "../assets/images/waterpolopic.png";
           <img 
             src={WaterPolo.src}
             alt="Water polo"
+            class="min-w-full h-[550px] object-cover" 
+          />
+          <img 
+            src={CoastalHonorChoir.src}
+            alt="Coastal Honor Choir performance"
+            class="min-w-full h-[550px] object-cover" 
+          />
+          <img 
+            src={PromFriends.src}
+            alt="Prom with friends"
             class="min-w-full h-[550px] object-cover" 
           />
         </div>
@@ -78,6 +153,8 @@ import WaterPolo from "../assets/images/waterpolopic.png";
           <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all" data-index="2"></button>
           <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all" data-index="3"></button>
           <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all" data-index="4"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all" data-index="5"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all" data-index="6"></button>
         </div>
       </div>
     </section>
@@ -89,7 +166,7 @@ import WaterPolo from "../assets/images/waterpolopic.png";
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const dots = document.querySelectorAll('.carousel-dot');
-    const totalImages = 5;
+    const totalImages = 7;
 
     function updateCarousel() {
       carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -131,4 +208,3 @@ import WaterPolo from "../assets/images/waterpolopic.png";
     updateCarousel();
   </script>
 </BaseLayout>
-
