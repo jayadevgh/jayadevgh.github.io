@@ -1,12 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectsProfile from "../assets/images/profilepictures/jayboatseattlecitybackground.png";
 ---
 
 <BaseLayout title="Projects">
   <section class="max-w-4xl mx-auto">
     <div class="flex items-center gap-6 mb-8">
       <img 
-        src="/images/profilepictures/jayboatseattlecitybackground.png"
+        src={ProjectsProfile.src}
         alt="Profile"
         class="w-24 h-24 rounded-full object-cover border-2 border-white/20 shadow-lg"
       />

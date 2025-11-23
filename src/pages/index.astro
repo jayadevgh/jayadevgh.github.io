@@ -1,12 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ProfilePic from "../assets/images/profilepictures/jaygoldengate.png";
+import SeattleNight from "../assets/images/beautifulnighttimeseattle.png";
 ---
 
 <BaseLayout title="Home">
   <section class="max-w-4xl mx-auto">
     <div class="flex items-center gap-6 mb-12">
       <img 
-        src="/images/profilepictures/jaygoldengate.png"
+        src={ProfilePic.src}
         alt="Profile"
         class="w-32 h-32 rounded-full object-cover border-2 border-white/20 shadow-lg"
       />
@@ -39,7 +41,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <section class="mt-16">
       <img 
-        src="/images/beautifulnighttimeseattle.png" 
+        src={SeattleNight.src}
         alt="Beautiful nighttime Seattle"
         class="rounded-2xl shadow-xl w-full object-cover" 
       />

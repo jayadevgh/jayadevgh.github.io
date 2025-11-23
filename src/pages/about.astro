@@ -1,12 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import AboutProfile from "../assets/images/profilepictures/mirrorpic.png";
+import JayGoldenGate from "../assets/images/jaygoldengate.png";
+import WFSuitFriends from "../assets/images/wfsuitwithfriends.png";
+import SuitAura2 from "../assets/images/suitaura2.JPEG";
+import AuraPic from "../assets/images/aurapic.JPEG";
+import WaterPolo from "../assets/images/waterpolopic.png";
 ---
 
 <BaseLayout title="About">
   <section class="max-w-4xl mx-auto">
     <div class="flex items-center gap-6 mb-12">
       <img 
-        src="/images/profilepictures/mirrorpic.png"
+        src={AboutProfile.src}
         alt="Profile"
         class="w-24 h-24 rounded-full object-cover border-2 border-white/20 shadow-lg"
       />
@@ -20,27 +26,27 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="relative overflow-hidden rounded-2xl shadow-2xl">
         <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
           <img 
-            src="/images/jaygoldengate.png"
+            src={JayGoldenGate.src}
             alt="Golden Gate Bridge"
             class="min-w-full h-[550px] object-cover" 
           />
           <img 
-            src="/images/wfsuitwithfriends.png" 
+            src={WFSuitFriends.src}
             alt="With friends" 
             class="min-w-full h-[550px] object-cover" 
           />
           <img 
-            src="/images/suitaura2.JPEG" 
+            src={SuitAura2.src}
             alt="Portrait" 
             class="min-w-full h-[550px] object-cover" 
           />
           <img 
-            src="/images/aurapic.JPEG"
+            src={AuraPic.src}
             alt="Portrait"
             class="min-w-full h-[550px] object-cover" 
           />
           <img 
-            src="/images/waterpolopic.png"
+            src={WaterPolo.src}
             alt="Water polo"
             class="min-w-full h-[550px] object-cover" 
           />

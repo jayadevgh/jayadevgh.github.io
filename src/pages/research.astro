@@ -1,12 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ResearchProfile from "../assets/images/profilepictures/aurapic.JPEG";
 ---
 
 <BaseLayout title="Research">
   <section class="max-w-4xl mx-auto">
     <div class="flex items-center gap-6 mb-12">
       <img 
-        src="/images/profilepictures/aurapic.JPEG"
+        src={ResearchProfile.src}
         alt="Profile"
         class="w-24 h-24 rounded-full object-cover border-2 border-white/20 shadow-lg"
       />
