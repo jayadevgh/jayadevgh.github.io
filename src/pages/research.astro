@@ -1,0 +1,201 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Research">
+  <section class="max-w-4xl mx-auto">
+    <div class="flex items-center gap-6 mb-12">
+      <img 
+        src="/images/profilepictures/aurapic.JPEG"
+        alt="Profile"
+        class="w-24 h-24 rounded-full object-cover border-2 border-white/20 shadow-lg"
+      />
+      <div>
+        <h1 class="text-4xl font-bold mb-2">Research</h1>
+        <p class="text-white/70">Building systems in NLP, medical imaging, and computational music.</p>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="mb-16 relative">
+      <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-white/20"></div>
+      <div class="space-y-8 relative">
+        <!-- UW Noah's ARK -->
+        <div class="flex gap-6 relative">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-accent border-4 border-background relative z-10 flex items-center justify-center">
+            <div class="w-3 h-3 rounded-full bg-background"></div>
+          </div>
+          <div class="flex-1 pb-8">
+            <div 
+              class="bg-surface/50 p-5 rounded-xl border border-white/10 hover:border-accent/50 cursor-pointer transition-all"
+              onclick="document.getElementById('noahs-ark').scrollIntoView({ behavior: 'smooth', block: 'start' })"
+            >
+              <div class="flex items-start justify-between mb-2">
+                <h3 class="text-xl font-semibold">University of Washington — Noah's ARK</h3>
+                <span class="text-white/50 text-sm whitespace-nowrap ml-4">Sep 2025 — Present</span>
+              </div>
+              <p class="text-white/60 text-sm mb-1">Undergraduate Researcher (1 of 10 undergrads)</p>
+              <p class="text-white/50 text-xs">Seattle, WA</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dartmouth-Hitchcock -->
+        <div class="flex gap-6 relative">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-accent border-4 border-background relative z-10 flex items-center justify-center">
+            <div class="w-3 h-3 rounded-full bg-background"></div>
+          </div>
+          <div class="flex-1 pb-8">
+            <div 
+              class="bg-surface/50 p-5 rounded-xl border border-white/10 hover:border-accent/50 cursor-pointer transition-all"
+              onclick="document.getElementById('dartmouth').scrollIntoView({ behavior: 'smooth', block: 'start' })"
+            >
+              <div class="flex items-start justify-between mb-2">
+                <h3 class="text-xl font-semibold">Dartmouth-Hitchcock Medical Center — Levy Lab</h3>
+                <span class="text-white/50 text-sm whitespace-nowrap ml-4">Summers 2023 — 2024</span>
+              </div>
+              <p class="text-white/60 text-sm mb-1">Research Intern (1 of 60 students selected)</p>
+              <p class="text-white/50 text-xs">Lebanon, NH</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Harvard Independent Research -->
+        <div class="flex gap-6 relative">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-accent border-4 border-background relative z-10 flex items-center justify-center">
+            <div class="w-3 h-3 rounded-full bg-background"></div>
+          </div>
+          <div class="flex-1">
+            <div 
+              class="bg-surface/50 p-5 rounded-xl border border-white/10 hover:border-accent/50 cursor-pointer transition-all"
+              onclick="document.getElementById('harvard').scrollIntoView({ behavior: 'smooth', block: 'start' })"
+            >
+              <div class="flex items-start justify-between mb-2">
+                <h3 class="text-xl font-semibold">Independent Research — Harvard</h3>
+                <span class="text-white/50 text-sm whitespace-nowrap ml-4">Aug 2023 — Nov 2024</span>
+              </div>
+              <p class="text-white/60 text-sm mb-1">Student Researcher</p>
+              <p class="text-white/50 text-xs">Remote</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-8">
+      <!-- Noah's ARK -->
+      <article id="noahs-ark" class="bg-surface/50 p-6 rounded-xl border border-white/10 hover:border-white/20 transition scroll-mt-8">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <h2 class="text-2xl font-semibold mb-1">University of Washington — Noah's ARK (UW NLP Group)</h2>
+            <p class="text-white/60 text-sm">Undergraduate Researcher • Sep 2025 — Present • Seattle, WA</p>
+          </div>
+          <a 
+            href="https://noahs-ark.github.io/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-accent hover:text-accent/80 text-sm underline"
+          >
+            Lab website →
+          </a>
+        </div>
+
+        <p class="text-white/80 mb-6 leading-relaxed">
+          Building a music dataset that pairs classical scores with verified online performances using multi-signal alignment verification.
+        </p>
+
+        <h3 class="text-lg font-medium mb-3 text-white/90">What I built</h3>
+        <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
+          <li>• implemented the candidate collection pipeline using triangulation of the DLC musicologist corpus, IMSLP metadata, and LLM-generated search queries to produce verified YouTube links, performer metadata, and comment threads</li>
+          <li>• built multi-signal score-to-audio verification system that triangulates DTW alignment paths, Aria-AMT transcripts for independent note events, and CLaMP patch-level similarity between audio windows and score fragments</li>
+          <li>• developed agreement-based acceptance criteria that defer unstable alignments rather than forcing them, handling missing intros, extra repeats, and score-edition mismatches</li>
+          <li>• created structured listener data pipeline that categorizes YouTube comments by sentiment, performance, composer, recording, and musicological content, feeding them into engineered questionnaires answered by multiple LLMs with citation requirements</li>
+          <li>• designed modular prompt system to avoid hallucination and enable training lightweight classifiers from LLM-labeled samples</li>
+        </ul>
+        <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> DTW, Aria-AMT, CLaMP, MusicXML, LLMs, IMSLP, DLC corpus</p>
+      </article>
+
+      <!-- Dartmouth-Hitchcock -->
+      <article id="dartmouth" class="bg-surface/50 p-6 rounded-xl border border-white/10 hover:border-white/20 transition scroll-mt-8">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <h2 class="text-2xl font-semibold mb-1">Dartmouth-Hitchcock Medical Center — Levy Lab</h2>
+            <p class="text-white/60 text-sm">Research Intern • Summers 2023 — 2024 • Lebanon, NH</p>
+          </div>
+          <a 
+            href="https://jlevy44.github.io/levylab/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-accent hover:text-accent/80 text-sm underline"
+          >
+            Lab website →
+          </a>
+        </div>
+
+        <div class="mt-6 space-y-8">
+          <div>
+            <h3 class="text-lg font-medium mb-3 text-white/90">Project 1 — Virtual Staining (GANs + GNNs)</h3>
+            <p class="text-white/80 mb-4 leading-relaxed text-sm">
+              Building a system that generates virtual CD45 immunofluorescence masks from H&E-stained slides using GANs and GNNs.
+            </p>
+            <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
+              <li>• built GAN architecture trained to translate H&E patches into corresponding CD45 fluorescence patterns, exploring U-Net, Attention U-Net, and Half U-Net generator variants with different trade-offs between localization accuracy, computational cost, and feature preservation</li>
+              <li>• designed PatchGAN discriminator that enforced local realism and penalized implausible outputs, learning textural cues in H&E stain that correlate with immune-cell morphology</li>
+              <li>• integrated graph neural network (GNN) pipeline that segments nuclei, generates patch-level embeddings, and constructs graphs capturing neighborhood relationships to provide explicit structural prior</li>
+              <li>• fused CNN features from the generator with GNN-derived relational information to maintain spatial consistency in regions where GANs alone tend to hallucinate or blur</li>
+              <li>• evaluated final system on 6,546 paired images containing both H&E and co-registered CD45 immunofluorescence, demonstrating improved localization of immune-cell clusters compared to pure convolutional models</li>
+            </ul>
+            <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> GANs, GNNs, U-Net, Attention U-Net, Half U-Net, PatchGAN, CNNs</p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-medium mb-3 text-white/90">Project 2 — Malignant Cell Ranking (Multiple-Instance Learning)</h3>
+            <p class="text-white/80 mb-4 leading-relaxed text-sm">
+              Using Multiple-Instance Learning to rank malignant cells in cytology slides for cancer diagnosis.
+            </p>
+            <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
+              <li>• constructed full preprocessing pipeline to turn raw cytology images into MIL-ready data: handling cell segmentation, extracting standardized cell patches, and representing each slide as a collection of cell embeddings</li>
+              <li>• integrated data into AutoParisX platform for automated MIL experimentation while writing custom PyTorch modules for attention pooling, feature extraction, and training logic</li>
+              <li>• trained MIL model to predict slide-level cancer labels while simultaneously learning which cells mattered most through attention mechanism that assigned scores reflecting each cell's contribution to diagnosis</li>
+              <li>• validated ranked cells by manually inspecting results, confirming the model consistently elevated cells exhibiting dysplastic characteristics (large irregular nuclei, coarse chromatin, high nuclear-to-cytoplasmic ratios) that mirror what pathologists search for</li>
+              <li>• delivered system that provides both accurate slide-level predictions and ranked lists of "most likely malignant" cells for each sample, making cytology analysis both scalable and interpretable</li>
+            </ul>
+            <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> Multiple-Instance Learning (MIL), PyTorch, AutoParisX, attention pooling</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Harvard Independent Research -->
+      <article id="harvard" class="bg-surface/50 p-6 rounded-xl border border-white/10 hover:border-white/20 transition scroll-mt-8">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <h2 class="text-2xl font-semibold mb-1">Independent Research — Harvard (Dr. Akshay Jagadeesh)</h2>
+            <p class="text-white/60 text-sm">Student Researcher • Aug 2023 — Nov 2024 • Remote</p>
+          </div>
+          <a 
+            href="https://github.com/jayadevgh/DementiaResearch" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-accent hover:text-accent/80 text-sm underline"
+          >
+            GitHub →
+          </a>
+        </div>
+
+        <p class="text-white/80 mb-6 leading-relaxed">
+          Using Conditional GANs to generate synthetic Alzheimer's MRI scans to augment scarce neuroimaging datasets.
+        </p>
+
+        <h3 class="text-lg font-medium mb-3 text-white/90">What I built</h3>
+        <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
+          <li>• established strong baseline classifier using ResNet architecture trained on curated Alzheimer's MRI dataset containing Non-Demented, Very Mild Demented, Mild Demented, and Moderate Demented images, achieving high performance after preprocessing, class rebalancing, and normalization</li>
+          <li>• developed Conditional GAN architecture that incorporates disease stages directly into both generator and discriminator, significantly stabilizing training compared to early DCGAN and WGAN experiments that suffered from mode collapse and lack of diversity</li>
+          <li>• implemented latent-space interpolation to probe the model's internal representations, creating smooth transitions between disease stages and revealing how the GAN encoded progression as continuous trajectories rather than discrete class jumps</li>
+          <li>• generated "intermediate" synthetic scans that don't exist in real datasets but represent plausible states between early and moderate disease, illustrating how disease characteristics evolve continuously</li>
+          <li>• evaluated synthetic and interpolated images in downstream tasks, demonstrating that incorporating generated MRI scans improved classification performance to roughly 88%, showing synthetic data can meaningfully supplement real-world datasets</li>
+        </ul>
+        <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> Conditional GANs, WGANs, DCGANs, ResNet, latent-space interpolation</p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

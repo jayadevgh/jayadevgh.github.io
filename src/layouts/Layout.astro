@@ -1,0 +1,18 @@
+---
+const { title = "Jayadev" } = Astro.props;
+---
+
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+
+    <!-- Tailwind stylesheet -->
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+
+  <body class="bg-black text-white min-h-screen">
+    <slot />
+  </body>
+</html>

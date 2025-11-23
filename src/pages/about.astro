@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="About">
+  <section class="max-w-4xl mx-auto">
+    <div class="flex items-center gap-6 mb-12">
+      <img 
+        src="/images/profilepictures/mirrorpic.png"
+        alt="Profile"
+        class="w-24 h-24 rounded-full object-cover border-2 border-white/20 shadow-lg"
+      />
+      <div>
+        <h1 class="text-4xl font-bold mb-2">About</h1>
+        <p class="text-white/70">CS + Math student at the University of Washington, exploring the intersection of technology, research, and the arts.</p>
+      </div>
+    </div>
+
+    <section class="mt-12 mb-12">
+      <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+        <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+          <img 
+            src="/images/jaygoldengate.png"
+            alt="Golden Gate Bridge"
+            class="min-w-full h-[550px] object-cover" 
+          />
+          <img 
+            src="/images/wfsuitwithfriends.png" 
+            alt="With friends" 
+            class="min-w-full h-[550px] object-cover" 
+          />
+          <img 
+            src="/images/suitaura2.JPEG" 
+            alt="Portrait" 
+            class="min-w-full h-[550px] object-cover" 
+          />
+          <img 
+            src="/images/aurapic.JPEG"
+            alt="Portrait"
+            class="min-w-full h-[550px] object-cover" 
+          />
+          <img 
+            src="/images/waterpolopic.png"
+            alt="Water polo"
+            class="min-w-full h-[550px] object-cover" 
+          />
+        </div>
+        
+        <button 
+          id="prevBtn"
+          class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all"
+          aria-label="Previous image"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        
+        <button 
+          id="nextBtn"
+          class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all"
+          aria-label="Next image"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all" data-index="0"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all" data-index="1"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all" data-index="2"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all" data-index="3"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all" data-index="4"></button>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <script>
+    let currentIndex = 0;
+    const carousel = document.getElementById('carousel');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const totalImages = 5;
+
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((dot, index) => {
+        if (index === currentIndex) {
+          dot.classList.add('bg-white');
+          dot.classList.remove('bg-white/50');
+        } else {
+          dot.classList.remove('bg-white');
+          dot.classList.add('bg-white/50');
+        }
+      });
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % totalImages;
+      updateCarousel();
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+      updateCarousel();
+    }
+
+    nextBtn.addEventListener('click', nextImage);
+    prevBtn.addEventListener('click', prevImage);
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel();
+      });
+    });
+
+    // Auto-play (optional - uncomment if desired)
+    // setInterval(nextImage, 5000);
+
+    // Initialize
+    updateCarousel();
+  </script>
+</BaseLayout>
+

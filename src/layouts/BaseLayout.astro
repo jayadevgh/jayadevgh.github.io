@@ -1,0 +1,30 @@
+---
+import "../styles/global.css";
+
+const { title = "Jayadev" } = Astro.props;
+---
+
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body class="bg-background text-white min-h-screen antialiased">
+    <nav class="w-full px-8 py-6 flex items-center justify-between border-b border-white/10">
+      <div class="font-semibold text-lg">Jayadev</div>
+      <div class="flex gap-6">
+        <a href="/" class="hover:text-accent transition">Home</a>
+        <a href="/research" class="hover:text-accent transition">Research</a>
+        <a href="/projects" class="hover:text-accent transition">Projects</a>
+        <a href="/music" class="hover:text-accent transition">Music</a>
+        <a href="/about" class="hover:text-accent transition">About</a>
+      </div>
+    </nav>
+
+    <main class="px-8 py-12">
+      <slot />
+    </main>
+  </body>
+</html>
