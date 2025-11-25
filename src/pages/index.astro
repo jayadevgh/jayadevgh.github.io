@@ -1,55 +1,68 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProfilePic from "../assets/images/profilepictures/promwfriends.png";
-import SeattleNight from "../assets/images/beautifulnighttimeseattle.png";
+import TransparentSeattle from "../assets/images/midnightseattle.png";
 ---
 
 <BaseLayout title="Home">
-  <section class="max-w-4xl mx-auto">
-    <div class="flex items-center gap-6 mb-12">
-      <img 
-        src={ProfilePic.src}
-        alt="Profile"
-        class="w-32 h-32 rounded-full object-cover border-2 border-white/20 shadow-lg"
-      />
-      <div>
-        <h1 class="text-5xl font-bold mb-2">Jayadev Ghanta</h1>
-        <p class="text-lg text-white/70 leading-relaxed">
-          Doubling CS & Math @ UW • Researcher • Builder • Musician
-          <br />
-          I work at the intersection of systems, machine learning, and music.
-        </p>
+  <div class="home-hero" style={`--hero-bg: url(${TransparentSeattle.src});`}>
+    <section class="max-w-4xl mx-auto">
+      <div class="flex items-center gap-6 mb-12">
+        <img 
+          src={ProfilePic.src}
+          alt="Profile"
+          class="w-32 h-32 rounded-full object-cover border-2 border-white/20 shadow-lg"
+        />
+        <div>
+          <h1 class="text-5xl font-bold mb-2">Jayadev Ghanta</h1>
+          <p class="text-lg text-white/70 leading-relaxed">
+            Doubling CS & Math @ UW • Researcher • Builder • Musician
+            <br />
+            I work at the intersection of systems, machine learning, and music.
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-      <a href="/research" class="bg-surface p-6 rounded-xl border border-white/10 hover:border-accent transition">
-        <h2 class="font-semibold text-xl mb-2">Research</h2>
-        <p class="text-white/60 text-sm">Music-data pipelines, medical imaging work, and math research training.</p>
-      </a>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <a href="/research" class="bg-surface p-6 rounded-xl border border-white/10 hover:border-accent transition">
+          <h2 class="font-semibold text-xl mb-2">Research</h2>
+          <p class="text-white/60 text-sm">Music-data pipelines, medical imaging work, and math research training.</p>
+        </a>
 
-      <a href="/projects" class="bg-surface p-6 rounded-xl border border-white/10 hover:border-accent transition">
-        <h2 class="font-semibold text-xl mb-2">Projects</h2>
-        <p class="text-white/60 text-sm">Bond, GPT-from-scratch, lightweight Transformers, and DL microframeworks.</p>
-      </a>
+        <a href="/projects" class="bg-surface p-6 rounded-xl border border-white/10 hover:border-accent transition">
+          <h2 class="font-semibold text-xl mb-2">Projects</h2>
+          <p class="text-white/60 text-sm">Bond, GPT-from-scratch, lightweight Transformers, and DL microframeworks.</p>
+        </a>
 
-      <a href="/music" class="bg-surface p-6 rounded-xl border border-white/10 hover:border-accent transition">
-        <h2 class="font-semibold text-xl mb-2">Music</h2>
-        <p class="text-white/60 text-sm">Choir leadership, Kickkats, musicals, and the UCLA Summer Voice Intensive.</p>
-      </a>
+        <a href="/music" class="bg-surface p-6 rounded-xl border border-white/10 hover:border-accent transition">
+          <h2 class="font-semibold text-xl mb-2">Music</h2>
+          <p class="text-white/60 text-sm">Choir leadership, Kickkats, musicals, and the UCLA Summer Voice Intensive.</p>
+        </a>
 
-      <a href="/blogs" class="bg-surface p-6 rounded-xl border border-white/10 hover:border-accent transition">
-        <h2 class="font-semibold text-xl mb-2">Blogs</h2>
-        <p class="text-white/60 text-sm">Writing on BPE tokenizers, makemore, micrograd, and other ML notes.</p>
-      </a>
-    </div>
-
-    <section class="mt-16">
-      <img 
-        src={SeattleNight.src}
-        alt="Beautiful nighttime Seattle"
-        class="rounded-2xl shadow-xl w-full object-cover" 
-      />
+        <a href="/blogs" class="bg-surface p-6 rounded-xl border border-white/10 hover:border-accent transition">
+          <h2 class="font-semibold text-xl mb-2">Blogs</h2>
+          <p class="text-white/60 text-sm">Writing on BPE tokenizers, makemore, micrograd, and other ML notes.</p>
+        </a>
+      </div>
     </section>
-  </section>
+  </div>
 </BaseLayout>
+
+<style>
+  .home-hero {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .home-hero::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: var(--hero-bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    z-index: -1;
+  }
+</style>
