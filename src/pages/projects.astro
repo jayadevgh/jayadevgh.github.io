@@ -22,6 +22,26 @@ import BondDeck from "../assets/pdf/DubHacks Presentation.pdf";
     <div class="mb-16 relative">
       <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-white/20"></div>
       <div class="space-y-8 relative">
+        <!-- KeyGuard -->
+        <div class="flex gap-6 relative">
+          <div class="flex-shrink-0 w-8 h-8 rounded-full bg-accent border-4 border-background relative z-10 flex items-center justify-center">
+            <div class="w-3 h-3 rounded-full bg-background"></div>
+          </div>
+          <div class="flex-1 pb-8">
+            <div 
+              class="bg-surface/50 p-5 rounded-xl border border-white/10 hover:border-accent/50 cursor-pointer transition-all"
+              onclick="document.getElementById('keyguard').scrollIntoView({ behavior: 'smooth', block: 'start' })"
+            >
+              <div class="flex items-start justify-between mb-2">
+                <h3 class="text-xl font-semibold">KeyGuard — Keystroke-Based Continuous Auth</h3>
+                <span class="text-white/50 text-sm whitespace-nowrap ml-4">Jan 2026</span>
+              </div>
+              <p class="text-white/60 text-sm mb-1">Hack to the Future Track Winner</p>
+              <p class="text-white/50 text-xs">Python • FastAPI • React • PyTorch</p>
+            </div>
+          </div>
+        </div>
+
         <!-- Bond -->
         <div class="flex gap-6 relative">
           <div class="flex-shrink-0 w-8 h-8 rounded-full bg-accent border-4 border-background relative z-10 flex items-center justify-center">
@@ -105,6 +125,49 @@ import BondDeck from "../assets/pdf/DubHacks Presentation.pdf";
     </div>
 
     <div class="space-y-8">
+      <!-- KeyGuard -->
+      <article id="keyguard" class="bg-surface/50 p-6 rounded-xl border border-white/10 hover:border-white/20 transition scroll-mt-8">
+        <div class="flex items-start justify-between gap-4 mb-4">
+          <div>
+            <h2 class="text-2xl font-semibold mb-1">KeyGuard — Continuous Keystroke Authentication</h2>
+            <p class="text-white/60 text-sm">Builder • Jan 2026 • Python, FastAPI, React</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3 whitespace-nowrap">
+            <a 
+              href="https://github.com/jayadevgh/KeyStroke-ID" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="text-accent hover:text-accent/80 text-sm underline"
+            >
+              GitHub →
+            </a>
+            <a 
+              href="https://devpost.com/software/keystroke-id" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="text-accent hover:text-accent/80 text-sm underline"
+            >
+              Devpost →
+            </a>
+          </div>
+        </div>
+
+        <p class="text-white/80 mb-6 leading-relaxed">
+          KeyGuard is a post-login, keystroke-dynamics authentication service that flags hijacked sessions moments after a user stops typing like themselves. We built it for Hack to the Future and walked away with a 1st-place track win.
+        </p>
+
+        <div class="bg-surface/30 p-5 rounded-lg border border-white/5">
+          <h3 class="text-lg font-medium mb-3 text-white/90">What I built</h3>
+          <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
+            <li>• instrumented a FastAPI streaming pipeline that captures keystroke timings, digraphs, and hold durations without impacting the host web app</li>
+            <li>• trained a PyTorch embedding model that compares live samples to enrolled profiles using Mahalanobis-distance scoring, hitting 96.9% Recall@1 on a custom 10+ user dataset</li>
+            <li>• wrapped inference behind lightweight auth hooks so every keystroke batch is scored in under 100 ms and risky sessions trigger re-auth challenges</li>
+            <li>• built a React + Tailwind dashboard that surfaces live trust scores, per-user drift charts, and audit logs for SOC teams</li>
+          </ul>
+          <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Stack:</strong> Python, FastAPI, PyTorch, React, TypeScript, Tailwind, SQLite</p>
+        </div>
+      </article>
+
       <!-- Bond -->
       <article id="bond-app" class="bg-surface/50 p-6 rounded-xl border border-white/10 hover:border-white/20 transition scroll-mt-8">
         <div class="flex items-start justify-between gap-4 mb-4">
@@ -151,7 +214,8 @@ import BondDeck from "../assets/pdf/DubHacks Presentation.pdf";
             <li>• implemented BLE advertising + scanning with custom service data payloads (`BND&lt;username&gt;`)</li>
             <li>• set up pairing logic in Firestore to manage requests, bond states, and time tracking</li>
             <li>• integrated AWS Bedrock models that compared user embeddings and surfaced similarity highlights</li>
-            <li>• ran field tests around campus where BLE stayed stable up to ~45–48 meters</li>
+            <li>• scaled Firebase/AWS infrastructure to support 100+ concurrent testers while keeping latency low</li>
+            <li>• ran field tests around campus where BLE detection stayed stable beyond 50 meters</li>
             <li>• coordinated backend interfaces with teammates who owned the ML voice → transcript → embeddings pipeline</li>
           </ul>
           <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Stack:</strong> Kotlin, Jetpack Compose, BLE, Firebase Auth & Firestore, AWS Bedrock, Android Lifecycle</p>
@@ -220,7 +284,7 @@ import BondDeck from "../assets/pdf/DubHacks Presentation.pdf";
         </div>
 
         <p class="text-white/80 mb-6 leading-relaxed">
-          I wanted to demystify language models, so I built one from the ground up with just NumPy. I did NOT use any existing frameworks! Just careful debugging, lots of notebook scribbles, and write-ups so future me could remember what actually worked.
+          I wanted to demystify language models, so I built one from the ground up with just NumPy—no frameworks, only careful debugging and notebook scribbles. I documented the full journey across three Medium posts that have been read by 1,000+ people.
         </p>
 
         <div class="bg-surface/30 p-5 rounded-lg border border-white/5">
@@ -231,6 +295,7 @@ import BondDeck from "../assets/pdf/DubHacks Presentation.pdf";
             <li>• trained on lightweight corpora and reached roughly the perplexity of nanoGPT’s tiny configs</li>
             <li>• wrote companion blog posts explaining tokenizer construction, attention math, and forward/backward passes</li>
             <li>• explored how initialization schemes impacted stability so I could keep runs from diverging</li>
+            <li>• published 3 Medium breakdowns on tokenizer internals, makemore, and micrograd that together surpassed 1,000 readers</li>
           </ul>
           <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Stack:</strong> NumPy, Python, BPE, Transformer architectures</p>
         </div>

@@ -53,7 +53,7 @@ import ResearchProfile from "../assets/images/profilepictures/aurapic.JPEG";
             >
               <div class="flex items-start justify-between mb-2">
                 <h3 class="text-xl font-semibold">Euler Circle — Advanced Mathematics Institute</h3>
-                <span class="text-white/50 text-sm whitespace-nowrap ml-4">2023 — 2025</span>
+                <span class="text-white/50 text-sm whitespace-nowrap ml-4">2024 — 2025</span>
               </div>
               <p class="text-white/60 text-sm mb-1">Student • Independent math research</p>
               <p class="text-white/50 text-xs">Palo Alto, CA (Hybrid)</p>
@@ -122,7 +122,7 @@ import ResearchProfile from "../assets/images/profilepictures/aurapic.JPEG";
         </div>
 
         <p class="text-white/80 mb-6 leading-relaxed">
-          Working at Noah's ARK has taught me how to balance accuracy with scale, how to validate multi-signal systems, and how to build datasets that future research can actually use.
+          My focus is an end-to-end multimodal pipeline for musical understanding research: pairing 1,000+ annotated scores from the Digital Library of Classical Music with over 1 million online performances and verifying 200K+ YouTube recordings before they enter downstream experiments.
         </p>
 
         <div class="mt-6 space-y-6">
@@ -131,7 +131,7 @@ import ResearchProfile from "../assets/images/profilepictures/aurapic.JPEG";
               <div>
                 <h3 class="text-lg font-medium mb-1 text-white/90">Music Dataset Project</h3>
                 <p class="text-white/80 text-sm leading-relaxed">
-                  Building a music dataset that pairs classical scores with verified online performances using multi-signal alignment verification.
+                  Linking DLC/IMSLP scores with noisy internet performances, then stress-testing alignments with multi-signal validation.
                 </p>
               </div>
               <svg class="research-toggle-icon w-5 h-5 text-white/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -141,13 +141,13 @@ import ResearchProfile from "../assets/images/profilepictures/aurapic.JPEG";
             <div class="research-content">
               <h4 class="text-base font-medium mb-2 text-white/80">What I built</h4>
               <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
-                <li>• implemented the candidate collection pipeline using triangulation of the DLC musicologist corpus, IMSLP metadata, and LLM-generated search queries to produce verified YouTube links, performer metadata, and comment threads</li>
-                <li>• built multi-signal score-to-audio verification system that triangulates DTW alignment paths, Aria-AMT transcripts for independent note events, and CLaMP patch-level similarity between audio windows and score fragments</li>
-                <li>• developed agreement-based acceptance criteria that defer unstable alignments rather than forcing them, handling missing intros, extra repeats, and score-edition mismatches</li>
-                <li>• created structured listener data pipeline that categorizes YouTube comments by sentiment, performance, composer, recording, and musicological content, feeding them into engineered questionnaires answered by multiple LLMs with citation requirements</li>
-                <li>• designed modular prompt system to avoid hallucination and enable training lightweight classifiers from LLM-labeled samples</li>
+                <li>• engineered the candidate-collection pipeline that triangulates DLC metadata, IMSLP editions, and LLM-generated search queries to produce verified performer links, timestamps, and structured comments for 1M+ performances</li>
+                <li>• implemented conservative verification that cross-checks DTW alignment paths, Aria-AMT transcripts, and CLaMP patch similarity before accepting any of the 200K+ YouTube candidates</li>
+                <li>• built deferral logic for unstable matches (missing intros, repeats, edition mismatches) so quality stays high without forcing alignments</li>
+                <li>• created a listener-data layer that categorizes YouTube comments and routes them through LLM questionnaires with citation requirements, bootstrapping labeled examples for lightweight classifiers</li>
+                <li>• packaged prompts + evaluation harness so other researchers can reproduce curation runs or plug in new heuristics</li>
               </ul>
-              <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> DTW, Aria-AMT, CLaMP, MusicXML, LLMs, IMSLP, DLC corpus</p>
+              <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> DTW, Aria-AMT, CLaMP, MusicXML, LLM prompt systems, IMSLP, DLC corpus</p>
             </div>
           </details>
         </div>
@@ -158,7 +158,7 @@ import ResearchProfile from "../assets/images/profilepictures/aurapic.JPEG";
         <div class="flex items-start justify-between mb-4">
           <div>
             <h2 class="text-2xl font-semibold mb-1">Euler Circle — Advanced Mathematics Institute</h2>
-            <p class="text-white/60 text-sm">Student • 2023 — 2025 • Palo Alto, CA (Hybrid)</p>
+            <p class="text-white/60 text-sm">Student • 2024 — 2025 • Palo Alto, CA (Hybrid)</p>
           </div>
         </div>
 
@@ -324,7 +324,7 @@ import ResearchProfile from "../assets/images/profilepictures/aurapic.JPEG";
                 <li>• designed PatchGAN discriminator that enforced local realism and penalized implausible outputs, learning textural cues in H&E stain that correlate with immune-cell morphology</li>
                 <li>• integrated graph neural network (GNN) pipeline that segments nuclei, generates patch-level embeddings, and constructs graphs capturing neighborhood relationships to provide explicit structural prior</li>
                 <li>• fused CNN features from the generator with GNN-derived relational information to maintain spatial consistency in regions where GANs alone tend to hallucinate or blur</li>
-                <li>• evaluated final system on 6,546 paired images containing both H&E and co-registered CD45 immunofluorescence, demonstrating improved localization of immune-cell clusters compared to pure convolutional models</li>
+                <li>• evaluated the pipeline on 4,000+ paired H&E ↔ CD45 images, improving immune-cell localization over pure CNNs while keeping inference practical for pathology labs</li>
               </ul>
               <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> GANs, GNNs, U-Net, Attention U-Net, Half U-Net, PatchGAN, CNNs</p>
             </div>
@@ -348,7 +348,7 @@ import ResearchProfile from "../assets/images/profilepictures/aurapic.JPEG";
               <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
                 <li>• constructed full preprocessing pipeline to turn raw cytology images into MIL-ready data: handling cell segmentation, extracting standardized cell patches, and representing each slide as a collection of cell embeddings</li>
                 <li>• integrated data into AutoParisX platform for automated MIL experimentation while writing custom PyTorch modules for attention pooling, feature extraction, and training logic</li>
-                <li>• trained MIL model to predict slide-level cancer labels while simultaneously learning which cells mattered most through attention mechanism that assigned scores reflecting each cell's contribution to diagnosis</li>
+                <li>• trained MIL models that reached ~0.91 AUC on bladder cancer detection while surfacing ranked malignant-cell candidates through attention-derived scores</li>
                 <li>• validated ranked cells by manually inspecting results, confirming the model consistently elevated cells exhibiting dysplastic characteristics (large irregular nuclei, coarse chromatin, high nuclear-to-cytoplasmic ratios) that mirror what pathologists search for</li>
                 <li>• delivered system that provides both accurate slide-level predictions and ranked lists of "most likely malignant" cells for each sample, making cytology analysis both scalable and interpretable</li>
               </ul>
@@ -396,9 +396,9 @@ import ResearchProfile from "../assets/images/profilepictures/aurapic.JPEG";
               <h4 class="text-base font-medium mb-2 text-white/80">What I built</h4>
               <ul class="space-y-2 text-white/70 text-sm leading-relaxed">
                 <li>• established strong baseline classifier using ResNet architecture trained on curated Alzheimer's MRI dataset containing Non-Demented, Very Mild Demented, Mild Demented, and Moderate Demented images, achieving high performance after preprocessing, class rebalancing, and normalization</li>
-                <li>• developed Conditional GAN architecture that incorporates disease stages directly into both generator and discriminator, significantly stabilizing training compared to early DCGAN and WGAN experiments that suffered from mode collapse and lack of diversity</li>
+                <li>• developed Conditional + Wasserstein GAN architecture that incorporates disease stages directly into both generator and discriminator, significantly stabilizing training compared to early DCGAN experiments that suffered from mode collapse</li>
                 <li>• implemented latent-space interpolation to probe the model's internal representations, creating smooth transitions between disease stages and revealing how the GAN encoded progression as continuous trajectories rather than discrete class jumps</li>
-                <li>• generated "intermediate" synthetic scans that don't exist in real datasets but represent plausible states between early and moderate disease, illustrating how disease characteristics evolve continuously</li>
+                <li>• generated 5,000+ synthetic MRI scans, including "intermediate" stages that illustrate continuous disease progression rather than discrete jumps</li>
                 <li>• evaluated synthetic and interpolated images in downstream tasks, demonstrating that incorporating generated MRI scans improved classification performance to roughly 88%, showing synthetic data can meaningfully supplement real-world datasets</li>
               </ul>
               <p class="mt-4 text-sm text-white/60"><strong class="text-white/80">Tools/Architectures:</strong> Conditional GANs, WGANs, DCGANs, ResNet, latent-space interpolation</p>
