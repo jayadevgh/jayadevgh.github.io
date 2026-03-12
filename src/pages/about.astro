@@ -158,6 +158,26 @@ import PromFriends from "../assets/images/promwfriends.png";
           </div>
         </div>
       </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-3">Key Project — KeyGuard (Feb 2026)</h2>
+        <div class="bg-surface/40 border border-white/10 rounded-xl p-6 text-white/80 text-sm leading-relaxed space-y-4">
+          <p class="text-white/90 font-semibold">Behavioral Identity Firewall • Hack to the Future 1st Place Track Winner</p>
+          <p>
+            KeyGuard keeps identity continuous instead of a one-time checkpoint by running a local keystroke-intelligence layer that locks sessions the moment another person starts typing.
+          </p>
+          <ul class="space-y-2">
+            <li>• Instrumented the entire on-device pipeline (keystroke capture → dwell/flight/digraph features → five-second sliding windows → neural embedding) with zero raw content stored.</li>
+            <li>• Trained a shared embedding model that L2-normalizes behavioral vectors and compares them against encrypted enrollment embeddings to spot impostors within ~15 seconds.</li>
+            <li>• Built a policy engine that requires three consecutive anomalous windows before triggering Touch ID/PIN step-up auth, cutting false positives while catching real takeovers fast.</li>
+            <li>• Packaged the system as a silent desktop agent with a deployment roadmap for JAMF/Intune and SDK hooks so security teams can add continuous verification without user friction.</li>
+          </ul>
+          <p class="text-white/70 text-xs">Stack: Python, PyTorch embedding model, real-time feature extraction, similarity scoring engine, Touch ID integration, encrypted local identity store</p>
+          <div>
+            <a href="https://github.com/jayadevgh/KeyStroke-ID" target="_blank" rel="noopener noreferrer" class="text-accent underline text-xs hover:text-accent/80">GitHub →</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="mt-12 mb-12">
